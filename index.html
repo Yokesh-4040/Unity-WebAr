@@ -11,14 +11,10 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
-      UnityLoader.compatibilityCheck = function (unityInstance, onsuccess, onerror) {
-        if (!UnityLoader.SystemInfo.hasWebGL) {
-          unityInstance.popup('Your browser does not support WebGL',
-            [{text: 'OK', callback: onerror}]);
-        } else {
+      
           onsuccess();
-        }
-      }
+        
+      
       var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
     </script>
   </head>
